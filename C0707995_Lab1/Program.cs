@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace C0707995_Assignment2
 {
-    internal class Program
+    public class Program
     {
-     public static void Main()
+        public static void Main()
         {
             //Student Name Harsimran Singh Student Id C0707995
+            //student name Sukhraj singh student Id C0709562
             //CSD3354 Section 2 
             //Assignmnet 2
             //March 7,2019
@@ -20,25 +21,30 @@ namespace C0707995_Assignment2
         }
     }
 
-    public delegate void MyDelegate();
+    public delegate int MyDelegate(out int i);
     public class DelegateExcercises
     {
-       
-
-      void Method1()
+      int Method1(out int i)
         {
             System.Console.WriteLine("Method1");
+            i = 10;
+            return 0;
         }
-        public void Method3()
-        {
+      
+   public void Method3()
+
+
+
+            {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            
-           
-           myDelegate();
-            System.Console.WriteLine(myDelegate.ToString());
+            MyDelegate myDelegate1 = new MyDelegate(Method1);
+            MyDelegate myDelegate2 =  myDelegate+myDelegate;
+            int intValue;
+            myDelegate2(out intValue);
+            }
         }
-        }
-    }
+    
+}
 
 
 

@@ -16,25 +16,20 @@ namespace C0707995_Assignment2
             //Assignmnet 2
             //March 7,2019
             DelegateExcercises delegateExcercises = new DelegateExcercises();
-            try
-            {
+            
                 delegateExcercises.Method3();
                 Console.ReadLine();
-            }
-            catch (System.Exception ex)
-            {
-                System.Console.WriteLine("Exception occured");
-                Console.ReadLine();
-            }
+          
         }
     }
 
-    public delegate void MyDelegate();
+    public delegate void MyDelegate(ref int intValue);
     public class DelegateExcercises
     {
-        void Method1()
+        void Method1(ref int intValue)
         {
-            throw new System.Exception();
+            intValue = intValue + 5;
+            System.Console.WriteLine("Method1" + intValue);
         }
       
    public void Method3()
@@ -43,8 +38,10 @@ namespace C0707995_Assignment2
 
             {
             MyDelegate myDelegate = new MyDelegate(Method1);
-
-            myDelegate();
+            MyDelegate myDelegate1 = new MyDelegate(Method1);
+            MyDelegate myDelegate2 =  myDelegate+myDelegate1;
+            int intParameter = 5;
+            myDelegate2(ref intParameter);
             }
         }
     

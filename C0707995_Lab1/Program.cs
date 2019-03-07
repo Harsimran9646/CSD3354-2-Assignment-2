@@ -8,8 +8,7 @@ namespace C0707995_Assignment2
 {
     internal class Program
     {
-        public delegate void MyDelegate();
-        public class DelegateExcercises : MyDelegate
+     public static void Main()
         {
             //Student Name Harsimran Singh Student Id C0707995
             //CSD3354 Section 2 
@@ -36,6 +35,7 @@ namespace C0707995_Assignment2
             
            
            myDelegate();
+            System.Console.WriteLine(myDelegate.ToString());
         }
         }
     }

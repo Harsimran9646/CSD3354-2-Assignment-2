@@ -8,7 +8,7 @@ namespace C0707995_Assignment2
 {
     internal class Program
     {
-        public static void Main ()
+        private static void Main(string[] args)
         {
             //Student Name Harsimran Singh Student Id C0707995
             //CSD3354 Section 2 
@@ -24,7 +24,7 @@ namespace C0707995_Assignment2
         {
             public delegate void MyDelegate();
 
-        private void Method1()
+        private void Method1(int i)
             {
                 Console.WriteLine("Method1");
                 Console.ReadLine();
@@ -38,13 +38,3 @@ namespace C0707995_Assignment2
     
 }
 
-namespace DelegatesAnsEvents
-{
-    internal class Program
-    {
-        private static void Main(string[] args)
-        {
-            //To DO:Call Method2 from the DelegateExcercises class 
-        }
-    }
-}
